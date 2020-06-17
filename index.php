@@ -15,6 +15,13 @@
 </body>
 
 </html>
-<? php
+<?php
+	class packet_format{
+		public $type;
+		public $message;
+		public $recv_data;
+	}
 
+	$recv_data = new packet_format;
+	
 ?>
