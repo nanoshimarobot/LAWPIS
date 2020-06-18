@@ -23,5 +23,16 @@
 	}
 
 	$recv_data = new packet_format;
+	$port = 49158;
+	$sock = socket_create(AF_INET, SOCK_DGRAM,SOL_UDP);
+	socket_bind($sock,'192.168.3.6',$port);
+	$from = '';
+	while(1){
+		socket_recvfrom($sock, $buf, 4096, 0, $from, $port);
+		$packet_data = unpack("Stype/Smessage/ITimestamp",$buf);
+		$recv_data->type = $array["type"];
+		$recv_data->message = $array["message"];
+		$recv_data->recv_data = data
+	}
 	
 ?>
