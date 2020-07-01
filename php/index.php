@@ -3,20 +3,26 @@
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style_sheet.css" />
-	<title>はろーみなさま</title>
+	<link rel="stylesheet" type="text/css" href="/style_sheet/style_sheet.css" />
+	<title>index</title>
+
 </head>
 
 <body>
-	<h1 class="s1">はろーわーるどですわ～～～～～～～！！！！</h1>
-	<h1 class="s2">はろーわーるどですわ～～～～～～～！！！！</h1>
-	<h1 class="s3">はろーわーるどですわ～～～～～～～！！！！</h1>
-	<h1 class="s4">はろーわーるどですわ～～～～～～～！！！！</h1>
+	<div>
+		<p class="text-center"><a href="index.php"><img src="/img/rogo_v2.svg" width="90" height=""/></a></p>
+		<p class="subtitle">Local Area Wireless Power Input System</p>
+	</div>
+	<hr class="customHR_1">
+	<div>
+		<h1 color="blue"></h1>
+	</div>
+	<p class="send_button">send</p>
 </body>
 
 </html>
 <?php
-error_reporting(E_ALL);
+/*error_reporting(E_ALL);
 set_time_limit(0);
 ob_implicit_flush();
  $port = 49513;
@@ -34,5 +40,5 @@ ob_implicit_flush();
 		print($recv_data["message"]);
 	}
 	socket_close($sock);
-	
+ */	
 ?>
