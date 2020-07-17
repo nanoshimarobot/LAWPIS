@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style_sheet.css" />
-	<title>index</title>
+	<title>LAWPIS_home</title>
 
 </head>
 
@@ -22,9 +22,21 @@
 			<p class="subtitle_2">Select target MAC address</p>
 			<center>
 			<select size="5" name="MAC_Addr" class="select_1">
-			<option value="num1">sample_1 FF:FF:FF:FF:FF:FF</option>
+			<?php
+			class test_class{
+				public function dumper($input1,$input2){
+					echo '<option value="num'.$input1.'">sample'.$input1.' '.$input2.'</option>';
+				}
+			}
+			$test = new test_class();
+			
+				for($i = 1; $i <= 10; $i++){
+					$test->dumper($i,'FF:FF:FF:FF:FF:FF');
+				}
+			?>
+			<!--<option value="num1">sample_1 FF:FF:FF:FF:FF:FF</option>
 			<option value="num2">sample_2 FF:FF:FF:FF:FF:FF</option>
-			<option value="num3">sample_3 FF:FF:FF:FF:FF:FF</option>
+			<option value="num3">sample_3 FF:FF:FF:FF:FF:FF</option>-->
 			<!--tion value="num4"><input type="text" name="num5"></option-->
 			</select>
 			<br>
