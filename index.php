@@ -2,13 +2,18 @@
 $array = array(1,2,3,4,5,6,7,8,9,10,'fuck ');
 $host = "192.168.3.";
 $port = 80;
-$timeout = 1;
+$index = 0;
 $tag_array;
 $output;
 exec("sudo arp-scan -I wlan0 -l",$output);
-	foreach($output as $value){
-		echo $value."<br>";
-	}	
+foreach($output as $key => $value){
+		#echo strpos($value, 'Ending')."<br>";
+	if($key != 0 && $key != 1 && strpos($value,'Ending') === false && strpos($value,'packet',3) === false && $value != NULL){
+		#echo $value."<br>";
+		$tag_array[$index] = $value;
+		$index++;
+	}
+}	
 	#$port_checker = fSockOpen($host+$i, $port, $errno, $errorstr, $timeout);
 		#$res = ($port_checker)? 1 : 0;
 		#echo $res;
@@ -43,16 +48,9 @@ exec("sudo arp-scan -I wlan0 -l",$output);
 			<center>
 			<select size="5" name="MAC_Addr" class="select_1">
 			<?php
-			class test_class{
-				public function dumper($input1,$input2, $array){
-					echo '<option value="num'.$input1.'">'.$array[$input1].'sample'.$input1.' '.$input2.'</option>';
-				}
+			foreach($tag_array as $key => $value){
+				echo '<option value="num'.$key.'">'.$value.'</option>';
 			}
-			$test = new test_class();
-			
-				for($i = 0; $i <= 10; $i++){
-					$test->dumper($i,'FF:FF:FF:FF:FF:FF',$tag_array);
-				}
 			?>
 			<!--<option value="num1">sample_1 FF:FF:FF:FF:FF:FF</option>
 			<option value="num2">sample_2 FF:FF:FF:FF:FF:FF</option>
