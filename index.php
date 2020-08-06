@@ -35,8 +35,8 @@ foreach($output as $key => $value){
 
 <body bgcolor="#e6fafe">
 	<div>
-		<p class="text-center"><a href="index.php"><img src="img/rogo_v2.svg" width="90" height=""/></a></p>
-		<p class="subtitle">Local Area Wireless Power Input System</p>
+		<p class="text-center"><a href="index.php"><img src="img/rogo_v2.png" width="390" height=""/></a></p>
+	<!--	<p class="subtitle">Local Area Wireless Power Input System</p>-->
 	</div>
 	<hr class="customHR_1">
 	<div>
