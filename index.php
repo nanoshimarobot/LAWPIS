@@ -4,18 +4,18 @@ $host = "192.168.3.";
 $port = 80;
 $timeout = 1;
 $tag_array;
-$output = 0;
-	for($i = 1; $i <= 20; $i++){
-		$output = shell_exec("sudo arping -c 1 -i wlan0 192.168.3.".$i);
-		var_dump($output);
-		#$port_checker = fSockOpen($host+$i, $port, $errno, $errorstr, $timeout);
+$output;
+exec("sudo arp-scan -I wlan0 -l",$output);
+	foreach($output as $value){
+		echo $value."<br>";
+	}	
+	#$port_checker = fSockOpen($host+$i, $port, $errno, $errorstr, $timeout);
 		#$res = ($port_checker)? 1 : 0;
 		#echo $res;
 		#if($res === 1){
 			#$tag_array[] = $host+$i;
 		#}
 		#fclose($port_checker);
-	}
 #var_dump($output);
 ?>
 <!doctype html>
