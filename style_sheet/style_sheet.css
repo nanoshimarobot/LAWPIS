@@ -1,12 +1,12 @@
 @charset "utf-8";
 @font-face{
     font-family: 'VoyagerGrotesque';
-    src: url(font/VoyagerGrotesque.ttf);
+    src: url(../font/VoyagerGrotesque.ttf);
 }
 
 @font-face{
     font-family: 'NeogreyRegular';
-    src: url(font/NeogreyRegular.otf);
+    src: url(../font/NeogreyRegular.otf);
 }
 .text-center{
     text-align: center;
