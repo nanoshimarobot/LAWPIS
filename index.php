@@ -5,7 +5,7 @@ $port = 80;
 $index = 0;
 $tag_array;
 $output;
-exec("sudo arp-scan -I wlan0 -l",$output);
+exec("sudo arp-scan -I eth1 -l",$output);
 foreach($output as $key => $value){
 		#echo strpos($value, 'Ending')."<br>";
 	if($key != 0 && $key != 1 && strpos($value,'Ending') === false && strpos($value,'packet',3) === false && $value != NULL){
@@ -43,13 +43,13 @@ foreach($output as $key => $value){
 		<h1 color="blue"></h1>
 	</div>
 	<div>
-		<form name="lawpis_core" action="index.php" method="post">
+		<form name="lawpis_core" action="wakeup.php" method="post">
 			<p class="subtitle_2">Select target MAC address</p>
 			<center>
 			<select size="5" name="MAC_Addr" class="select_1">
 			<?php
 			foreach($tag_array as $key => $value){
-				echo '<option value="num'.$key.'">'.$value.'</option>';
+				echo '<option value="'.$value.'">'.$value.'</option>';
 			}
 			?>
 			<!--<option value="num1">sample_1 FF:FF:FF:FF:FF:FF</option>
