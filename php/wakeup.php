@@ -36,4 +36,8 @@ socket_set_option($sock,SOL_SOCKET,SO_BROADCAST,1);
 socket_sendto($sock,$packet,strlen($packet),0,$addr,$port);
 socket_sendto($sock,$packet2,strlen($packet2),0,$addr,$port);
 socket_close($sock);
+
+http_response_code(301);
+header("Location: index.php");
+exit;
 ?>
