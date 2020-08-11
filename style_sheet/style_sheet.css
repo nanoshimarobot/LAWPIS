@@ -1,0 +1,60 @@
+@charset "utf-8";
+@font-face{
+    font-family: 'VoyagerGrotesque';
+    src: url(font/VoyagerGrotesque.ttf);
+}
+
+@font-face{
+    font-family: 'NeogreyRegular';
+    src: url(font/NeogreyRegular.otf);
+}
+.text-center{
+    text-align: center;
+}
+
+.subtitle{
+    text-align: center;
+    font-family: NeogreyRegular;
+}
+
+.subtitle_2{
+	text-align:center;
+}
+
+.customHR_1{
+    color: #1e90ff;
+    border-top: 5px double ;
+}
+
+.send_button{
+	display: inline-block;
+	border: solid 2px #1e90ff;
+	font-size:14pt;
+	text-align:center;
+	transition:.6s;
+	padding: 0.1em;
+	color: #000000;
+	background: #ffffff;
+	width: 200px;
+	height: 30px;
+}
+
+.send_button:hover{
+	color : #335ba3;
+	background: #8faadc;
+}
+
+.send_button:active{
+	color: #8faadc;
+	background: #20d9ec;
+}
+
+.select_1{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: solid 2px #1e90ff;
+	width: 600px;
+	height: 300px;
+}
+
