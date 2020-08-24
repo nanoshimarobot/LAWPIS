@@ -1,7 +1,6 @@
 <?php
-$array = array(1,2,3,4,5,6,7,8,9,10,'fuck ');
-$host = "192.168.3.";
-$port = 80;
+#$host = "192.168.3.";
+#$port = 80;
 $index = 0;
 $tag_array;
 $output;
@@ -28,7 +27,7 @@ foreach($output as $key => $value){
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style_sheet.css" />
+	<link rel="stylesheet" type="text/css" href="./style_sheet/style_sheet.css" />
 	<title>LAWPIS_home</title>
 
 </head>
