@@ -1,3 +1,3 @@
-### システム設計チーム課題用  
- * **概要**  
- タイトルの通り
+### Wireless power input system
+ * **Description**  
+  Input power wirelessly to computer by using the Wake On LAN.  
